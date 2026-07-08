@@ -2,7 +2,9 @@
 - After changing the public Protocol or Server `HttpApi`, run `bun run generate` from `packages/client`. Do not edit `src/generated` or `src/generated-effect` directly.
 - Keep runtime dependencies directed from Schema to Core and Protocol, then from Core and Protocol to Server. Client runtime code may depend on Schema and Protocol but never Core or Server; `sdk-next` composes Client, Core, and Server.
 - The default branch in this repo is `dev`.
-- Local `main` ref may not exist; use `dev` or `origin/dev` for diffs.
+- This checkout is a **fork** of `anomalyco/opencode`: `origin` → your fork (`DevinWeb3/opencode`, push here), `upstream` → official (pull only). See `FORK-WORKFLOW.md` for the full fork workflow.
+- Local `main` ref may not exist; use `dev` or `upstream/dev` for diffs against official.
+- Do all development on the `clt` branch; sync with `git fetch upstream && git merge upstream/dev && git push`.
 
 ## Branch Names
 
